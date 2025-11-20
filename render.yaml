@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: trion-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        value: ${MONGODB_URI}
+      - key: PORT
+        value: ${PORT}
